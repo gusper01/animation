@@ -1,38 +1,49 @@
+/* Estilos generales */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: 100vw;
     height: 100vh;
-    background-color: #f0f0f0;
     margin: 0;
+    overflow: hidden;
 }
 
+/* Cuadrado formado por flechas */
+svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Nodo */
 .node {
-    width: 100px;
-    height: 100px;
-    background-color: #4caf50;
-    color: white;
+    width: 80px; /* Tamaño del nodo */
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
     position: absolute;
+    font-size: 32px; /* Tamaño del icono/emoticón */
 }
 
+/* Posicionamiento de los nodos en los vértices del cuadrado */
 #node1 {
-    left: 40px;
-    top: 40px;
+   /* left: calc(50% - 200px / 2 - 80px / 2); */
+    left: calc(50% - 250px  - 40px );
+    top: calc(50% - 270px / 2 - 80px / 2);
 }
 
 #node2 {
-    right: 40px;
-    top: 40px;
+    left: calc(50% - 100px / 2 - 80px / 2);
+    top: calc(50% - 270px / 2 - 80px / 2);
 }
 
-svg {
-    position: absolute;
-    top: 90px;
-    left: 0;
-    right: 0;
+#node3 {
+    left: calc(50% - 480px / 2 - 80px / 2);
+    top: calc(50% + 100px / 2 - 80px / 2);
 }
 
+#node4 {
+    left: calc(50% - 60px  - 80px / 2);
+    top: calc(50% + 100px / 2 - 80px / 2);
+}
